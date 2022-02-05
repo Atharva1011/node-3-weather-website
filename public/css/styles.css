@@ -53,3 +53,7 @@ button {
   color: white;
   padding: 8px;
 }
+
+ul li {
+  list-style-type: none;
+}

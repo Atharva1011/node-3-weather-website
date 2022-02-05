@@ -16,15 +16,15 @@ const forecast = (lat, long, callback) => {
       const current_temp = current.temperature;
       const feels_like_temp = current.feelslike;
       const condition = current.weather_descriptions[0];
-      callback(
-        undefined,
-        condition +
-          " It is currently " +
-          current_temp +
-          " degrees. But it feels like " +
-          feels_like_temp +
-          " degrees"
-      );
+      const pressure = current.pressure;
+      const humidity = current.humidity;
+      callback(undefined, {
+        current_temp,
+        feels_like_temp,
+        condition,
+        pressure,
+        humidity,
+      });
     }
   });
 };
